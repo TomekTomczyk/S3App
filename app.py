@@ -15,7 +15,7 @@ def create_app():
     app = Flask(__name__)
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite3"
 
-    @app.route("/", methods=["GET", "POST"])
+    @app.route("/s3", methods=["GET", "POST"])
     def index():
         url = os.environ['GET_NUM_OF_RECS_URL']
 
